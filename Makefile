@@ -10,5 +10,14 @@ lint-fix:
 even:
 	php bin/game-even
 
+prime:
+	php bin/game-prime
+
+gcd:
+	php bin/game-gcd
+
+calc:
+	php bin/game-calc
+
 reload:
 	composer dump-autoload

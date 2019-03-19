@@ -1,7 +1,7 @@
 {
     "name": "yorickov/console-games",
     "description": "small console games",
-    "bin": ["bin/game-even"],
+    "bin": ["bin/game-even", "bin/game-prime", "bin/game-gcd", "bin/game-calc"],
     "type": "project",
     "minimum-stability": "dev",
     "scripts": {
@@ -12,7 +12,10 @@
         "files": [
             "src/flow.php",
             "src/utils.php",
-            "src/games/even.php"
+            "src/games/even.php",
+            "src/games/gcd.php",
+            "src/games/prime.php",
+            "src/games/calc.php"
         ]
     },  
     "require": {
