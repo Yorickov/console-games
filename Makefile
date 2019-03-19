@@ -7,5 +7,8 @@ lint:
 lint-fix:
 	composer run-script phpcbf -- --standard=PSR12 src bin
 
-start:
-	php bin/even
+even:
+	php bin/game-even
+
+reload:
+	composer dump-autoload

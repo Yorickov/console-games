@@ -4,8 +4,59 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6e236ac9aaf7c150dc8f1f7235f9c29a",
-    "packages": [],
+    "content-hash": "aa3233869ce9834266fe303c972e7966",
+    "packages": [
+        {
+            "name": "wp-cli/php-cli-tools",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wp-cli/php-cli-tools.git",
+                "reference": "fe9c7c44a9e1bf2196ec51dc38da0593dbf2993f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wp-cli/php-cli-tools/zipball/fe9c7c44a9e1bf2196ec51dc38da0593dbf2993f",
+                "reference": "fe9c7c44a9e1bf2196ec51dc38da0593dbf2993f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">= 5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "cli": "lib/"
+                },
+                "files": [
+                    "lib/cli/cli.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "James Logsdon",
+                    "email": "jlogsdon@php.net",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Daniel Bachhuber",
+                    "email": "daniel@handbuilt.co",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Console utilities for PHP",
+            "homepage": "http://github.com/wp-cli/php-cli-tools",
+            "keywords": [
+                "cli",
+                "console"
+            ],
+            "time": "2018-09-04T13:28:00+00:00"
+        }
+    ],
     "packages-dev": [
         {
             "name": "squizlabs/php_codesniffer",
@@ -13,12 +64,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "04463b62d61b8bfbf880ca3e745fa9f79ca140e2"
+                "reference": "2241c64ce0529b35b4eab43d1488087657ab96e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/04463b62d61b8bfbf880ca3e745fa9f79ca140e2",
-                "reference": "04463b62d61b8bfbf880ca3e745fa9f79ca140e2",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/2241c64ce0529b35b4eab43d1488087657ab96e9",
+                "reference": "2241c64ce0529b35b4eab43d1488087657ab96e9",
                 "shasum": ""
             },
             "require": {
@@ -56,12 +107,13 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2019-03-18T03:01:32+00:00"
+            "time": "2019-03-19T04:50:34+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "wp-cli/php-cli-tools": 20,
         "squizlabs/php_codesniffer": 20
     },
     "prefer-stable": false,

@@ -1,7 +1,7 @@
 {
     "name": "yorickov/console-games",
     "description": "small console games",
-    "bin": ["bin/even"],
+    "bin": ["bin/game-even"],
     "type": "project",
     "minimum-stability": "dev",
     "scripts": {
@@ -10,10 +10,14 @@
     },
     "autoload": {
         "files": [
-            "src/base.php"
+            "src/flow.php",
+            "src/utils.php",
+            "src/games/even.php"
         ]
     },  
-    "require": {},
+    "require": {
+        "wp-cli/php-cli-tools": "dev-master"
+    },
     "require-dev": {
         "squizlabs/php_codesniffer": "^3.0@dev"
     }
