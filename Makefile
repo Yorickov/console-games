@@ -22,5 +22,8 @@ calc:
 progression:
 	php bin/game-progression
 
+balance:
+	php bin/game-balance
+
 reload:
 	composer dump-autoload

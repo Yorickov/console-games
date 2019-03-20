@@ -18,7 +18,7 @@ function isPrime(int $num)
     };
     return $iter($num - 1);
 };
-  
+
 function gcd(int $a, int $b)
 {
     if ($a > $b) {
@@ -28,14 +28,32 @@ function gcd(int $a, int $b)
     return gcd($b, $a);
 };
 
+// phpcs:enable
 function fillArray(int $length, int $first, int $step)
 {
-	$iter = function (int $count, int $item, array $arr) use ($step, &$iter) {
-		if ($count === 0) {
-			return $arr;
-		}
-		$arr[] = $item;
-		return $iter($count - 1, $item + $step, $arr);
-	};
-	return $iter($length, $first, []);
+    $iter = function (int $count, int $item, array $arr) use ($step, &$iter) {
+        if ($count === 0) {
+            return $arr;
+        }
+        $arr[] = $item;
+        return $iter($count - 1, $item + $step, $arr);
+    };
+    return $iter($length, $first, []);
+}
+
+function balance(array $arr)
+{
+    $min = min($arr);
+    $max = max($arr);
+    if ($max - $min <= 1) {
+        return $arr;
+    }
+
+    $minIndex = array_search($min, $arr);
+    $maxIndex = array_search($max, $arr);
+
+    array_splice($arr, $maxIndex, 1, $max - 1);
+    array_splice($arr, $minIndex, 1, $min + 1);
+    
+    return balance($arr);
 }

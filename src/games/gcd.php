@@ -5,6 +5,8 @@ namespace ConsoleGames\Games\Gcd;
 use function ConsoleGames\Flow\buildEngine;
 use function ConsoleGames\Utils\gcd;
 
+const RULES = 'Find the greatest common divisor of given numbers';
+
 function getCorrectAnswer(int $firstNumber, int $secondNumber)
 {
     $result = gcd($firstNumber, $secondNumber);
@@ -13,8 +15,6 @@ function getCorrectAnswer(int $firstNumber, int $secondNumber)
 
 function run()
 {
-    $rules = 'Find the greatest common divisor of given numbers';
-
     $getQA = function (int $maxNumber = 100) {
         $firstNumber = rand(1, $maxNumber);
         $secondNumber = rand(1, $maxNumber);
@@ -23,5 +23,5 @@ function run()
         $correctAnswer = getCorrectAnswer($firstNumber, $secondNumber);
         return ['question' => $question, 'correctAnswer' => $correctAnswer];
     };
-    buildEngine($rules, $getQA);
+    buildEngine(RULES, $getQA);
 }
