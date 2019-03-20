@@ -7,3 +7,6 @@
 - composer, modules
 - basic environment
 - PHP functions: native, lambda, autoload
+
+### Setup:
+`make install`

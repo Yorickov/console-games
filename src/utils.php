@@ -27,3 +27,15 @@ function gcd(int $a, int $b)
     }
     return gcd($b, $a);
 };
+
+function fillArray(int $length, int $first, int $step)
+{
+	$iter = function (int $count, int $item, array $arr) use ($step, &$iter) {
+		if ($count === 0) {
+			return $arr;
+		}
+		$arr[] = $item;
+		return $iter($count - 1, $item + $step, $arr);
+	};
+	return $iter($length, $first, []);
+}

@@ -19,5 +19,8 @@ gcd:
 calc:
 	php bin/game-calc
 
+progression:
+	php bin/game-progression
+
 reload:
 	composer dump-autoload
